@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg {
+    background: url('bg.jpg') repeat-x;
+    width: 200vw; 
+    height: 100vh; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: moveBg 10s linear infinite;
+}
+
+.walker {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+}
+
+@keyframes moveBg {
+    from {
+        transform: translateX(-100vw);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
